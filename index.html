@@ -4,349 +4,479 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Undangan Khitanan – Ammar Tediyansyah</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Quattrocento+Sans:wght@400;700&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body class="loading-active" data-theme="light">
 
-<!-- LOADING -->
-<div id="loading-screen">
-  <div class="loading-inner">
-    <div class="load-ornament">
-      <svg viewBox="0 0 120 120">
-        <circle cx="60" cy="60" r="54" fill="none" stroke="#89c4e1" stroke-width="1.5" stroke-dasharray="8 4" class="spin-slow"/>
-        <circle cx="60" cy="60" r="42" fill="none" stroke="#d4e9f7" stroke-width="1" stroke-dasharray="4 6" class="spin-rev"/>
-      </svg>
-    </div>
-
-    <p class="load-title">Khitanan</p>
-    <p class="load-name">Ammar Tediyansyah</p>
-
-    <div class="load-bar">
-      <div class="load-bar-inner"></div>
+  <!-- ░░░ LOADING SCREEN ░░░ -->
+  <div id="loading-screen">
+    <div class="loading-inner">
+      <div class="load-ornament">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="60" r="54" fill="none" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="8 4" class="spin-slow"/>
+          <circle cx="60" cy="60" r="42" fill="none" stroke="url(#lg2)" stroke-width="1" stroke-dasharray="4 6" class="spin-rev"/>
+          <circle cx="60" cy="60" r="28" fill="rgba(255,255,255,0.08)" stroke="url(#lg1)" stroke-width="1"/>
+          <text x="60" y="55" text-anchor="middle" font-family="Cormorant Garamond" font-size="9" fill="white" opacity="0.9">بِسْمِ اللَّهِ</text>
+          <text x="60" y="70" text-anchor="middle" font-family="Cormorant Garamond" font-size="7" fill="white" opacity="0.7">الرَّحْمٰنِ الرَّحِيمِ</text>
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#89c4e1"/>
+              <stop offset="100%" stop-color="#c5dff8"/>
+            </linearGradient>
+            <linearGradient id="lg2" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#d4e9f7"/>
+              <stop offset="100%" stop-color="#89c4e1"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p class="load-title">Khitanan</p>
+      <p class="load-name">Ammar Tediyansyah</p>
+      <div class="load-bar"><div class="load-bar-inner"></div></div>
     </div>
   </div>
-</div>
 
-<!-- HERO -->
-<section id="cover" class="section-cover">
+  <!-- ░░░ COVER / HERO ░░░ -->
+  <section id="cover" class="section-cover">
+    <!-- watercolor bg blobs -->
+    <div class="wc-blob wc1"></div>
+    <div class="wc-blob wc2"></div>
+    <div class="wc-blob wc3"></div>
 
-  <div class="wc-blob wc1"></div>
-  <div class="wc-blob wc2"></div>
-  <div class="wc-blob wc3"></div>
+    <!-- floating petals -->
+    <div class="petals-container" id="petals"></div>
 
-  <div class="cover-inner">
+    <!-- floral corners -->
+    <div class="floral-tl"></div>
+    <div class="floral-tr"></div>
+    <div class="floral-bl"></div>
+    <div class="floral-br"></div>
 
-    <p class="cover-bismillah">
-      بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ
-    </p>
+    <div class="cover-inner">
+      <p class="cover-bismillah">بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ</p>
+      <p class="cover-save">✦ Save The Date ✦</p>
 
-    <p class="cover-save">✦ Save The Date ✦</p>
+      <!-- photo frame -->
+      <div class="photo-frame-wrap">
+        <div class="photo-ring r1"></div>
+        <div class="photo-ring r2"></div>
 
-    <div class="photo-frame-wrap">
-      <div class="photo-ring r1"></div>
-      <div class="photo-ring r2"></div>
+        <div class="photo-frame">
+          <img src="assets/images/2.jpeg" alt="Ammar" class="cover-photo">
+        </div>
 
-      <div class="photo-frame">
-        <img src="assets/images/2.jpeg" alt="Ammar" class="cover-photo">
+        <div class="photo-floral pf1">❀</div>
+        <div class="photo-floral pf2">✿</div>
+        <div class="photo-floral pf3">❁</div>
+        <div class="photo-floral pf4">✾</div>
       </div>
-    </div>
 
-    <h1 class="cover-name">
-      Ammar
-      <span>Tediyansyah</span>
-    </h1>
+      <h1 class="cover-name">Ammar<br><span>Tediyansyah</span></h1>
 
-    <div class="cover-kepada glass-card">
-      <p class="kepada-label">Kepada Yth.</p>
-      <p class="kepada-name" id="kepada-name">Tamu Undangan</p>
-    </div>
+      <div class="cover-divider"><span>✦</span></div>
 
-    <button class="btn-buka" id="btn-buka" onclick="bukaUndangan()">
-      💌 Buka Undangan
-      <span class="btn-shimmer"></span>
-    </button>
+      <div class="cover-kepada glass-card">
+        <p class="kepada-label">Kepada Yth.</p>
+        <p class="kepada-name" id="kepada-name">Tamu Undangan</p>
+      </div>
 
-  </div>
-</section>
-
-<!-- MAIN -->
-<div id="main-content" class="main-hidden">
-
-  <!-- PEMBUKA -->
-  <section id="pembuka" class="section reveal-section">
-
-    <div class="section-container">
-
-      <p class="arabic-greeting">
-        السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ
-      </p>
-
-      <h2 class="section-subtitle">
-        Assalamu'alaikum Warahmatullahi Wabarakatuh
-      </h2>
-
-      <div class="divider-floral">❀ ✿ ❁</div>
-
-      <p class="section-body">
-        Dengan memohon Rahmat dan Ridho Allah SWT,<br>
-        kami mengundang Bapak/Ibu/Saudara/i<br>
-        untuk menghadiri acara khitanan putra kami.
-      </p>
-
+      <button class="btn-buka" id="btn-buka" onclick="bukaUndangan()">
+        <span class="btn-icon">💌</span>
+        <span>Buka Undangan</span>
+        <span class="btn-shimmer"></span>
+      </button>
     </div>
   </section>
 
-  <!-- DATA ANAK -->
-  <section id="anak" class="section reveal-section alt-bg">
+  <!-- ░░░ MAIN CONTENT ░░░ -->
+  <div id="main-content" class="main-hidden">
 
-    <div class="section-container">
-
-      <p class="section-eyebrow">Yang Dikhitankan</p>
-
-      <div class="anak-card glass-card">
-
-        <div class="anak-photo-wrap">
-
-          <div class="anak-photo-ring"></div>
-
-          <div class="anak-photo">
-            <img src="assets/images/1.jpeg" alt="Ammar" class="anak-img">
-          </div>
-
-        </div>
-
-        <h2 class="anak-name">
-          Ammar Tediyansyah
-        </h2>
-
-        <div class="anak-divider">✦</div>
-
-        <p class="anak-putra">Putra dari</p>
-
-        <p class="anak-ortu">
-          Bapak Sambiyono &amp; Ibu Suwarni
-        </p>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- DETAIL -->
-  <section id="detail-acara" class="section reveal-section">
-
-    <div class="section-container">
-
-      <p class="section-eyebrow">Undangan Acara</p>
-
-      <h2 class="section-title">
-        Detail Acara
-      </h2>
-
-      <div class="divider-floral">❀ ✿ ❁</div>
-
-      <div class="detail-grid">
-
-        <div class="detail-card glass-card">
-          <div class="detail-icon">📅</div>
-          <h3>Hari & Tanggal</h3>
-          <p class="detail-main">13 – 14 Juni 2026</p>
-        </div>
-
-        <div class="detail-card glass-card">
-          <div class="detail-icon">🕐</div>
-          <h3>Waktu</h3>
-          <p class="detail-main">08.00 WIB</p>
-        </div>
-
-        <div class="detail-card glass-card" style="grid-column:1/-1;">
-          <div class="detail-icon">📍</div>
-          <h3>Lokasi</h3>
-
-          <p class="detail-main">
-            Desa Linggasari
-          </p>
-
-          <p class="detail-sub">
-            RT 02 RW 06, Kecamatan Kembaran<br>
-            Kabupaten Banyumas
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- COUNTDOWN -->
-  <section id="countdown" class="section reveal-section alt-bg">
-
-    <div class="section-container">
-
-      <p class="section-eyebrow">
-        Menuju Hari Istimewa
-      </p>
-
-      <h2 class="section-title">
-        Hitung Mundur
-      </h2>
-
-      <div class="countdown-wrap">
-
-        <div class="cd-card glass-card">
-          <span class="cd-num" id="cd-hari">00</span>
-          <span class="cd-label">Hari</span>
-        </div>
-
-        <div class="cd-card glass-card">
-          <span class="cd-num" id="cd-jam">00</span>
-          <span class="cd-label">Jam</span>
-        </div>
-
-        <div class="cd-card glass-card">
-          <span class="cd-num" id="cd-menit">00</span>
-          <span class="cd-label">Menit</span>
-        </div>
-
-        <div class="cd-card glass-card">
-          <span class="cd-num" id="cd-detik">00</span>
-          <span class="cd-label">Detik</span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MAP -->
-  <section id="maps" class="section reveal-section">
-
-    <div class="section-container">
-
-      <p class="section-eyebrow">
-        Lokasi Acara
-      </p>
-
-      <h2 class="section-title">
-        Google Maps
-      </h2>
-
-      <div class="map-wrap glass-card">
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18"
-          width="100%"
-          height="300"
-          style="border:0;border-radius:16px;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
-
-      </div>
-
-      <a href="https://maps.app.goo.gl/zwGrgzYhkTHVtWgZ6"
-         target="_blank"
-         class="btn-maps">
-
-        🗺️ Buka Google Maps
-
+    <!-- floating nav -->
+    <nav class="float-nav glass-card" id="float-nav">
+      <a href="#pembuka" class="nav-item" data-label="Beranda">
+        <svg viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
       </a>
 
-    </div>
-  </section>
+      <a href="#detail-acara" class="nav-item" data-label="Detail">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+        </svg>
+      </a>
 
-  <!-- RSVP -->
-  <section id="rsvp" class="section reveal-section alt-bg">
+      <a href="#countdown" class="nav-item" data-label="Hitung">
+        <svg viewBox="0 0 24 24">
+          <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+        </svg>
+      </a>
 
-    <div class="section-container">
+      <a href="#maps" class="nav-item" data-label="Lokasi">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      </a>
 
-      <p class="section-eyebrow">
-        RSVP
-      </p>
+      <a href="#rsvp" class="nav-item" data-label="RSVP">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a>
+    </nav>
 
-      <h2 class="section-title">
-        Ucapan & Doa
-      </h2>
+    <!-- music btn -->
+    <button class="music-btn glass-card" id="music-btn" onclick="toggleMusic()" title="Musik">
+      <span id="music-icon">🎵</span>
+    </button>
 
-      <div class="rsvp-card glass-card">
+    <!-- dark mode btn -->
+    <button class="dark-btn glass-card" id="dark-btn" onclick="toggleDark()" title="Mode">
+      <span id="dark-icon">🌙</span>
+    </button>
 
-        <div class="rsvp-form">
+    <!-- audio -->
+    <audio id="bg-music" loop>
+      <source src="assets/music/Maher Zain -Salla Alayka Rahman Official Music Video ماهر زين - صلى عليك الرحمن.mp3.mpeg" type="audio/mpeg" />
+    </audio>
 
-          <div class="form-group">
-            <label>Nama</label>
-            <input type="text" id="rsvp-nama" placeholder="Nama Anda">
+    <!-- ░░ SECTION: PEMBUKA ░░ -->
+    <section id="pembuka" class="section reveal-section">
+      <div class="wc-blob wc4"></div>
+
+      <div class="section-container">
+        <div class="ornament-top">✦ ────────── ✦ ────────── ✦</div>
+
+        <p class="arabic-greeting">
+          السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ
+        </p>
+
+        <h2 class="section-subtitle">
+          Assalamu'alaikum Warahmatullahi Wabarakatuh
+        </h2>
+
+        <div class="divider-floral">❀ ✿ ❁</div>
+
+        <p class="section-body">
+          Dengan memohon Rahmat dan Ridho Allah SWT,<br />
+          kami mengundang Bapak/Ibu/Saudara/i<br />
+          untuk menghadiri acara khitanan putra kami.
+        </p>
+
+        <div class="ornament-bottom">✦ ────────── ✦ ────────── ✦</div>
+      </div>
+    </section>
+
+    <!-- ░░ SECTION: DATA ANAK ░░ -->
+    <section id="anak" class="section reveal-section alt-bg">
+      <div class="section-container">
+        <p class="section-eyebrow">Yang Dikhitankan</p>
+
+        <div class="anak-card glass-card">
+          <div class="anak-photo-wrap">
+            <div class="anak-photo-ring"></div>
+
+            <div class="anak-photo">
+              <img src="assets/images/1.jpeg" alt="Ammar" class="anak-img">
+            </div>
+
+            <div class="photo-badge">✨</div>
           </div>
 
-          <div class="form-group">
-            <label>Ucapan</label>
-            <textarea id="rsvp-ucapan" rows="4"></textarea>
+          <h2 class="anak-name">Ammar Tediyansyah</h2>
+
+          <div class="anak-divider">✦</div>
+
+          <p class="anak-putra">Putra dari</p>
+
+          <p class="anak-ortu">
+            Bapak Sambiyono &amp; Ibu Suwarni
+          </p>
+
+          <div class="anak-deco">
+            <span>❀</span>
+            <span>بِسْمِ اللَّهِ</span>
+            <span>❀</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SECTION: KEHORMATAN ░░ -->
+    <section id="kehormatan" class="section reveal-section">
+      <div class="section-container">
+        <div class="kehormatan-card glass-card">
+          <div class="kehormatan-icon">🕌</div>
+
+          <p class="kehormatan-text">
+            Merupakan suatu kebahagiaan dan kehormatan bagi kami apabila
+            Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu
+            kepada putra kami.
+          </p>
+
+          <div class="kehormatan-sign">
+            — Keluarga Besar Sambiyono —
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SECTION: DETAIL ACARA ░░ -->
+    <section id="detail-acara" class="section reveal-section alt-bg">
+      <div class="section-container">
+        <p class="section-eyebrow">Undangan Acara</p>
+
+        <h2 class="section-title">Detail Acara</h2>
+
+        <div class="divider-floral">❀ ✿ ❁</div>
+
+        <div class="detail-grid">
+
+          <div class="detail-card glass-card">
+            <div class="detail-icon">📅</div>
+
+            <h3>Hari &amp; Tanggal</h3>
+
+            <p class="detail-main">Sabtu – Minggu</p>
+
+            <p class="detail-sub">13 – 14 Juni 2026</p>
           </div>
 
-          <button class="btn-kirim" onclick="kirimRSVP()">
-            💌 Kirim Ucapan
-          </button>
+          <div class="detail-card glass-card">
+            <div class="detail-icon">🕐</div>
+
+            <h3>Waktu</h3>
+
+            <p class="detail-main">08.00 WIB</p>
+
+            <p class="detail-sub">sampai selesai</p>
+          </div>
+
+          <div class="detail-card glass-card" style="grid-column: 1/-1;">
+            <div class="detail-icon">📍</div>
+
+            <h3>Lokasi</h3>
+
+            <p class="detail-main">Desa Linggasari</p>
+
+            <p class="detail-sub">
+              RT 02 RW 06, Kecamatan Kembaran<br />
+              Kabupaten Banyumas
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SECTION: COUNTDOWN ░░ -->
+    <section id="countdown" class="section reveal-section">
+      <div class="wc-blob wc5"></div>
+
+      <div class="section-container">
+        <p class="section-eyebrow">Menuju Hari Istimewa</p>
+
+        <h2 class="section-title">Hitung Mundur</h2>
+
+        <div class="divider-floral">❀ ✿ ❁</div>
+
+        <div class="countdown-wrap">
+
+          <div class="cd-card glass-card">
+            <span class="cd-num" id="cd-hari">00</span>
+            <span class="cd-label">Hari</span>
+          </div>
+
+          <div class="cd-sep">:</div>
+
+          <div class="cd-card glass-card">
+            <span class="cd-num" id="cd-jam">00</span>
+            <span class="cd-label">Jam</span>
+          </div>
+
+          <div class="cd-sep">:</div>
+
+          <div class="cd-card glass-card">
+            <span class="cd-num" id="cd-menit">00</span>
+            <span class="cd-label">Menit</span>
+          </div>
+
+          <div class="cd-sep">:</div>
+
+          <div class="cd-card glass-card">
+            <span class="cd-num" id="cd-detik">00</span>
+            <span class="cd-label">Detik</span>
+          </div>
 
         </div>
 
+        <p class="cd-target">
+          13 Juni 2026 — Desa Linggasari, Banyumas
+        </p>
       </div>
+    </section>
 
-      <div class="ucapan-list" id="ucapan-list"></div>
+    <!-- ░░ SECTION: MAPS ░░ -->
+    <section id="maps" class="section reveal-section">
+      <div class="section-container">
+        <p class="section-eyebrow">Temukan Kami</p>
 
-    </div>
-  </section>
+        <h2 class="section-title">Lokasi Acara</h2>
 
-  <!-- THANK -->
-  <section class="section thank-section reveal-section">
+        <div class="divider-floral">❀ ✿ ❁</div>
 
-    <div class="section-container">
+        <div class="map-wrap glass-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d247.28787165142379!2d109.28295637787475!3d-7.397973242251169!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1779820171106!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
 
-      <div class="thank-card glass-card">
+        <a href="https://maps.app.goo.gl/zwGrgzYhkTHVtWgZ6" target="_blank" class="btn-maps">
+          <span>🗺️</span> Buka Google Maps
+        </a>
+      </div>
+    </section>
 
-        <div class="thank-icon">🤍</div>
+    <!-- ░░ SECTION: RSVP ░░ -->
+    <section id="rsvp" class="section reveal-section alt-bg">
+      <div class="section-container">
 
-        <p class="thank-title">
-          Terima Kasih
+        <p class="section-eyebrow">Konfirmasi Kehadiran</p>
+
+        <h2 class="section-title">RSVP &amp; Ucapan</h2>
+
+        <div class="divider-floral">❀ ✿ ❁</div>
+
+        <div class="rsvp-card glass-card">
+          <div class="rsvp-form">
+
+            <div class="form-group">
+              <label>Nama Lengkap</label>
+              <input type="text" id="rsvp-nama" placeholder="Masukkan nama Anda…" />
+            </div>
+
+            <div class="form-group">
+              <label>Ucapan &amp; Doa</label>
+              <textarea id="rsvp-ucapan" rows="4" placeholder="Tuliskan ucapan dan doa untuk Ammar…"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Kehadiran</label>
+
+              <div class="radio-group">
+
+                <label class="radio-label">
+                  <input type="radio" name="hadir" value="Hadir" checked />
+                  <span class="radio-custom">✓ Insya Allah Hadir</span>
+                </label>
+
+                <label class="radio-label">
+                  <input type="radio" name="hadir" value="Tidak Hadir" />
+                  <span class="radio-custom">✗ Tidak Hadir</span>
+                </label>
+
+              </div>
+            </div>
+
+            <button class="btn-kirim" onclick="kirimRSVP()">
+              <span>💌</span> Kirim Ucapan
+              <span class="btn-shimmer"></span>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- ucapan list -->
+        <div class="ucapan-list" id="ucapan-list">
+          <!-- injected by JS -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ░░ SECTION: TERIMA KASIH ░░ -->
+    <section class="section thank-section reveal-section">
+      <div class="section-container">
+
+        <div class="thank-card glass-card">
+
+          <div class="thank-icon">🤍</div>
+
+          <p class="thank-title">
+            Terima Kasih Atas Kehadiran &amp; Doanya
+          </p>
+
+          <div class="divider-floral">❀ ✿ ❁</div>
+
+          <p class="thank-text">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami
+            apabila Bapak/Ibu/Saudara/i berkenan hadir serta
+            memberikan doa terbaik untuk putra kami tercinta.
+          </p>
+
+          <p class="thank-text">
+            Kami sekeluarga mengucapkan terima kasih atas perhatian,
+            doa, dan kehadirannya.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SECTION: FOOTER ░░ -->
+    <footer class="section-footer">
+
+      <div class="wc-blob wc6"></div>
+
+      <div class="footer-inner">
+
+        <p class="footer-bismillah">
+          بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ
         </p>
 
-        <p class="thank-text">
-          Atas kehadiran dan doa restunya.
+        <p class="footer-title">
+          Khitanan Ammar Tediyansyah
+        </p>
+
+        <p class="footer-ortu">
+          Putra dari Bapak Sambiyono &amp; Ibu Suwarni
+        </p>
+
+        <div class="footer-divider">✦ ── ✦ ── ✦</div>
+
+        <p class="footer-date">
+          13 – 14 Juni 2026
+        </p>
+
+        <p class="footer-place">
+          Desa Linggasari, Kembaran, Banyumas
+        </p>
+
+        <div class="footer-doa">
+          <p>جَزَاكُمُ اللَّهُ خَيْرًا كَثِيرًا</p>
+
+          <p class="footer-doa-id">
+            Jazakumullahu Khairan Katsira
+          </p>
+        </div>
+
+        <p class="footer-copy">
+          Made with ❤️ for Ammar
         </p>
 
       </div>
+    </footer>
 
-    </div>
-  </section>
+  </div><!-- /main-content -->
 
-  <!-- FOOTER -->
-  <footer class="section-footer">
-
-    <div class="footer-inner">
-
-      <p class="footer-title">
-        Khitanan Ammar Tediyansyah
-      </p>
-
-      <p class="footer-date">
-        13 – 14 Juni 2026
-      </p>
-
-      <p class="footer-place">
-        Desa Linggasari, Banyumas
-      </p>
-
-    </div>
-
-  </footer>
-
-</div>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
