@@ -1,8 +1,6 @@
 // ═══════════════════════════════════════
-// UNDANGAN KHITANAN – script.js (FINAL GRID)
+// UNDANGAN KHITANAN – script.js
 // ═══════════════════════════════════════
-
-let galleryInitialized = false;
 
 // ──────────────────────────────────────
 // DOM READY (NAMA + THEME)
@@ -37,12 +35,14 @@ window.addEventListener("load", () => {
   setTimeout(() => {
 
     const loading = document.getElementById("loading-screen");
-    if (loading) loading.classList.add("hidden");
+
+    if (loading) {
+      loading.classList.add("hidden");
+    }
 
     document.body.classList.remove("loading-active");
 
     createPetals();
-    generateGallery();
     initReveal();
     startCountdown();
     loadUcapan();
@@ -81,6 +81,7 @@ function bukaUndangan() {
 function createPetals() {
 
   const container = document.getElementById("petals");
+
   if (!container) return;
 
   const petals = ["❀", "✿", "❁", "✾"];
@@ -88,18 +89,26 @@ function createPetals() {
   setInterval(() => {
 
     const petal = document.createElement("div");
+
     petal.classList.add("petal");
 
-    petal.innerHTML = petals[Math.floor(Math.random() * petals.length)];
+    petal.innerHTML =
+      petals[Math.floor(Math.random() * petals.length)];
 
     petal.style.left = Math.random() * 100 + "vw";
-    petal.style.animationDuration = (6 + Math.random() * 6) + "s";
-    petal.style.fontSize = (14 + Math.random() * 14) + "px";
+    petal.style.animationDuration =
+      (6 + Math.random() * 6) + "s";
+
+    petal.style.fontSize =
+      (14 + Math.random() * 14) + "px";
+
     petal.style.opacity = Math.random();
 
     container.appendChild(petal);
 
-    setTimeout(() => petal.remove(), 12000);
+    setTimeout(() => {
+      petal.remove();
+    }, 12000);
 
   }, 600);
 
@@ -113,12 +122,18 @@ function initReveal() {
   const sections = document.querySelectorAll(".reveal-section");
 
   const observer = new IntersectionObserver((entries) => {
+
     entries.forEach(entry => {
+
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
       }
+
     });
-  }, { threshold: 0.15 });
+
+  }, {
+    threshold: 0.15
+  });
 
   sections.forEach(sec => observer.observe(sec));
 
@@ -129,7 +144,8 @@ function initReveal() {
 // ──────────────────────────────────────
 function startCountdown() {
 
-  const targetDate = new Date("2026-06-13T08:00:00").getTime();
+  const targetDate =
+    new Date("2026-06-13T08:00:00").getTime();
 
   setInterval(() => {
 
@@ -138,15 +154,35 @@ function startCountdown() {
 
     if (distance < 0) return;
 
-    const hari = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const jam = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const menit = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const detik = Math.floor((distance % (1000 * 60)) / 1000);
+    const hari = Math.floor(
+      distance / (1000 * 60 * 60 * 24)
+    );
 
-    document.getElementById("cd-hari").innerText = String(hari).padStart(2, "0");
-    document.getElementById("cd-jam").innerText = String(jam).padStart(2, "0");
-    document.getElementById("cd-menit").innerText = String(menit).padStart(2, "0");
-    document.getElementById("cd-detik").innerText = String(detik).padStart(2, "0");
+    const jam = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) /
+      (1000 * 60 * 60)
+    );
+
+    const menit = Math.floor(
+      (distance % (1000 * 60 * 60)) /
+      (1000 * 60)
+    );
+
+    const detik = Math.floor(
+      (distance % (1000 * 60)) / 1000
+    );
+
+    document.getElementById("cd-hari").innerText =
+      String(hari).padStart(2, "0");
+
+    document.getElementById("cd-jam").innerText =
+      String(jam).padStart(2, "0");
+
+    document.getElementById("cd-menit").innerText =
+      String(menit).padStart(2, "0");
+
+    document.getElementById("cd-detik").innerText =
+      String(detik).padStart(2, "0");
 
   }, 1000);
 
@@ -163,13 +199,21 @@ function toggleDark() {
   const current = body.getAttribute("data-theme");
 
   if (current === "light") {
+
     body.setAttribute("data-theme", "dark");
+
     icon.innerHTML = "☀️";
+
     localStorage.setItem("theme", "dark");
+
   } else {
+
     body.setAttribute("data-theme", "light");
+
     icon.innerHTML = "🌙";
+
     localStorage.setItem("theme", "light");
+
   }
 
 }
@@ -187,11 +231,15 @@ function toggleMusic() {
   if (!music) return;
 
   if (isPlaying) {
+
     music.pause();
     icon.innerHTML = "🔇";
+
   } else {
+
     music.play();
     icon.innerHTML = "🎵";
+
   }
 
   isPlaying = !isPlaying;
@@ -203,13 +251,20 @@ function toggleMusic() {
 // ──────────────────────────────────────
 function kirimRSVP() {
 
-  const nama = document.getElementById("rsvp-nama")?.value;
-  const ucapan = document.getElementById("rsvp-ucapan")?.value;
-  const hadir = document.querySelector('input[name="hadir"]:checked')?.value;
+  const nama =
+    document.getElementById("rsvp-nama")?.value;
+
+  const ucapan =
+    document.getElementById("rsvp-ucapan")?.value;
+
+  const hadir =
+    document.querySelector('input[name="hadir"]:checked')?.value;
 
   if (!nama || !ucapan) {
+
     alert("Mohon isi nama dan ucapan 😊");
     return;
+
   }
 
   const data = {
@@ -219,11 +274,15 @@ function kirimRSVP() {
     waktu: new Date().toLocaleString("id-ID")
   };
 
-  let list = JSON.parse(localStorage.getItem("ucapanList")) || [];
+  let list =
+    JSON.parse(localStorage.getItem("ucapanList")) || [];
 
   list.unshift(data);
 
-  localStorage.setItem("ucapanList", JSON.stringify(list));
+  localStorage.setItem(
+    "ucapanList",
+    JSON.stringify(list)
+  );
 
   renderUcapan();
 
@@ -240,15 +299,26 @@ function loadUcapan() {
 
 function renderUcapan() {
 
-  const container = document.getElementById("ucapan-list");
+  const container =
+    document.getElementById("ucapan-list");
+
   if (!container) return;
 
-  const list = JSON.parse(localStorage.getItem("ucapanList")) || [];
+  const list =
+    JSON.parse(localStorage.getItem("ucapanList")) || [];
 
   container.innerHTML = "";
 
   if (list.length === 0) {
-    container.innerHTML = `<div class="ucapan-card"><p class="ucapan-text">Belum ada ucapan 💙</p></div>`;
+
+    container.innerHTML = `
+      <div class="ucapan-card">
+        <p class="ucapan-text">
+          Belum ada ucapan 💙
+        </p>
+      </div>
+    `;
+
     return;
   }
 
@@ -261,23 +331,36 @@ function renderUcapan() {
       .substring(0, 2)
       .toUpperCase();
 
-    const badgeClass = item.hadir === "Hadir"
-      ? "badge-hadir"
-      : "badge-tidak";
+    const badgeClass =
+      item.hadir === "Hadir"
+        ? "badge-hadir"
+        : "badge-tidak";
 
     const card = document.createElement("div");
+
     card.classList.add("ucapan-card");
 
     card.innerHTML = `
       <div class="ucapan-header">
-        <div class="ucapan-avatar">${initials}</div>
-        <div class="ucapan-meta">
-          <div class="ucapan-name">${item.nama}</div>
-          <div class="ucapan-time">${item.waktu}</div>
+
+        <div class="ucapan-avatar">
+          ${initials}
         </div>
+
+        <div class="ucapan-meta">
+          <div class="ucapan-name">
+            ${item.nama}
+          </div>
+
+          <div class="ucapan-time">
+            ${item.waktu}
+          </div>
+        </div>
+
         <div class="ucapan-badge ${badgeClass}">
           ${item.hadir}
         </div>
+
       </div>
 
       <div class="ucapan-text">
@@ -314,7 +397,9 @@ window.addEventListener("scroll", () => {
 
     item.classList.remove("active");
 
-    if (item.getAttribute("href") === "#" + current) {
+    if (
+      item.getAttribute("href") === "#" + current
+    ) {
       item.classList.add("active");
     }
 
