@@ -199,40 +199,6 @@ function toggleMusic() {
 }
 
 // ──────────────────────────────────────
-// GALLERY (AUTO GRID VERSION)
-// ──────────────────────────────────────
-
-const galleryImages = [
-  "assets/images/3.jpeg",
-  "assets/images/4.jpeg",
-  "assets/images/5.jpeg"
-];
-
-function generateGallery() {
-
-  if (galleryInitialized) return;
-  galleryInitialized = true;
-
-  const track = document.getElementById("gallery-track");
-  if (!track) return;
-
-  track.innerHTML = "";
-
-  galleryImages.forEach((img, index) => {
-
-    const item = document.createElement("div");
-    item.classList.add("gallery-item");
-
-    item.innerHTML = `
-      <img src="${img}" alt="Gallery ${index + 1}">
-    `;
-
-    track.appendChild(item);
-  });
-
-}
-
-// ──────────────────────────────────────
 // RSVP
 // ──────────────────────────────────────
 function kirimRSVP() {
